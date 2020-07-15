@@ -32,3 +32,8 @@ eval "$(ssh-agent -s)"
 ```
 ssh-add ~/.ssh/git_id_rsa
 ```
+- ssh config (~/.ssh/git_id_rsa):
+```
+Host github.com
+  IdentityFile ~/.ssh/git_id_rsa
+```
