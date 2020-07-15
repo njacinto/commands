@@ -24,6 +24,13 @@ openssl rsautl -decrypt -inkey priv-key.pem -in file.dat -out file.txt
 ```
 ssh-keygen -t rsa -b 4096 -C "name@domain"
 ```
+- add key to ssh config (~/.ssh/git_id_rsa):
+```
+Host github.com
+  IdentityFile ~/.ssh/git_id_rsa
+```
+
+
 - start ssh agent:
 ```
 eval "$(ssh-agent -s)"
@@ -31,9 +38,4 @@ eval "$(ssh-agent -s)"
 - add key to agent:
 ```
 ssh-add ~/.ssh/git_id_rsa
-```
-- ssh config (~/.ssh/git_id_rsa):
-```
-Host github.com
-  IdentityFile ~/.ssh/git_id_rsa
 ```
