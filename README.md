@@ -24,7 +24,7 @@ openssl rsautl -decrypt -inkey priv-key.pem -in file.dat -out file.txt
 ```
 ssh-keygen -t rsa -b 4096 -C "name@domain"
 ```
-- add key to ssh config (~/.ssh/git_id_rsa):
+- add key to ssh config (~/.ssh/config):
 ```
 Host github.com
   IdentityFile ~/.ssh/git_id_rsa
